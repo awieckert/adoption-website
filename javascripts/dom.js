@@ -6,7 +6,7 @@ const printToDom = (pets) => {
 
 const domString = (petsArray) => {
   let stringToPrint = '';
-  petsArray.pets.forEach((pet) => {
+  petsArray.forEach((pet) => {
     stringToPrint += `<div class='${pet.type} col-md-4'>`;
     stringToPrint +=  `<h2>${pet.name}</h2>`;
     stringToPrint +=  `<img src='${pet.imageUrl}'>`;
