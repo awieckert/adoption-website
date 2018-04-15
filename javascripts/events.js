@@ -1,5 +1,7 @@
 const addEvents = () => {
-  const myButtons = document.getElementsByClassName('btn');
+  const myButtons = document.getElementsByClassName('filter');
+  const unFilter = document.getElementById('unfilter');
+  unFilter.addEventListener('click', unFiltered);
   for (let i = 0; i < myButtons.length; i++) {
     myButtons[i].addEventListener('click', filterPets);
   }
@@ -15,6 +17,13 @@ const filterPets = (e) => {
     } else {
       allThePets[i].style.display = 'none';
     }
+  }
+};
+
+const unFiltered = () => {
+  const allPets = document.getElementsByClassName('pet-card');
+  for (let i = 0; i < allPets.length; i++) {
+    allPets[i].style.display = '';
   }
 };
 
