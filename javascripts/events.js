@@ -18,10 +18,19 @@ const filterPets = (e) => {
       allThePets[i].classList.add('fadeout');
     }
   }
-  const fadedPets = document.getElementsByClassName('fadeout');
-  for (let j = 0; j < fadedPets.length; j++) {
-    fadedPets[j].style.display = 'none';
-  }
+
+  function delayedHide () {
+    window.setTimeout(hideStuff, 2700);
+  };
+
+  function hideStuff () {
+    const fadedPets = document.getElementsByClassName('fadeout');
+    for (let j = 0; j < fadedPets.length; j++) {
+      fadedPets[j].style.display = 'none';
+    }
+  };
+
+  delayedHide();
 };
 
 const unFiltered = () => {
