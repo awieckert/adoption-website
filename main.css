@@ -7,10 +7,41 @@ img {
   width: 50%;
 }
 
-.pet-card {
+#main-container {
+  background-image: url(./img/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.pet-card2 {
   margin: 10px;
   border: 1px solid blueviolet;
   box-shadow: 10px 10px 10px;
   height: 400px;
 }
 
+.buttons {
+  margin: 20px 0;
+}
+
+.type {
+  
+}
+
+.fadeout {
+  animation: fadeout2;
+  animation-duration: 3s;
+}
+
+@keyframes fadeout2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* 
+.type-cat {
+  background-color: lightgreen;
+} */
