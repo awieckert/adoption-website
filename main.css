@@ -18,6 +18,7 @@ img {
   border: 1px solid blueviolet;
   box-shadow: 10px 10px 10px;
   height: 400px;
+  position: relative;
 }
 
 .buttons {
@@ -25,7 +26,9 @@ img {
 }
 
 .type {
-  
+  position: absolute;
+  bottom: 0px;
+  height: 40px; 
 }
 
 .fadeout {
