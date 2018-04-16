@@ -8,15 +8,19 @@ const addEvents = () => {
 };
 
 const filterPets = (e) => {
-  console.log('Event: ', e);
   const allThePets = document.getElementsByClassName('pet-card');
-  console.log('allthepets: ', allThePets);
   for (let i = 0; i < allThePets.length; i++) {
     if (allThePets[i].classList[0] === e.target.id) {
       allThePets[i].style.display = '';
+      allThePets[i].classList.remove('fadeout');
     } else {
-      allThePets[i].style.display = 'none';
+      // allThePets[i].style.display = 'none';
+      allThePets[i].classList.add('fadeout');
     }
+  }
+  const fadedPets = document.getElementsByClassName('fadeout');
+  for (let j = 0; j < fadedPets.length; j++) {
+    fadedPets[j].style.display = 'none';
   }
 };
 
@@ -24,6 +28,7 @@ const unFiltered = () => {
   const allPets = document.getElementsByClassName('pet-card');
   for (let i = 0; i < allPets.length; i++) {
     allPets[i].style.display = '';
+    allPets[i].classList.remove('fadeout');
   }
 };
 
